@@ -56,4 +56,50 @@ section {
     width: 300px;
     height: 300px;
     border: 1px solid #555;
+    position: relative;
+    border-radius: 50%;
+    animation-name: orbit;
+    animation-duration: 24s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#sun {
+    width: 60px;
+    height: 60px;
+    background-color: #FC0;
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    border-radius: 50%;
+}
+
+#earth {
+    width: 28px;
+    height: 28px;
+    background-color: #00BAFF;
+    position: absolute;
+    top: 164px;
+    left: 16px;
+    border-radius: 50%;
+    animation-name: orbit;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#moon {
+    width: 12px;
+    height: 12px;
+    background-color: #999;
+    position: absolute;
+    top: -28px;
+    right: 8px;
+    border-radius: 50%;
+}
+
+@keyframes orbit {
+    100% {
+        transform: rotate(360deg);
+    }
 }
